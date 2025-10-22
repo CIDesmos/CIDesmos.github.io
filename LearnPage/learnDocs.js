@@ -129,8 +129,8 @@ returnButton.addEventListener('click', () => {
     docView.style.visibility = 'hidden'
 })
 
-searchBox.addEventListener('keypress', (e) => {
-    if (e.key == "Enter") {
+searchBox.addEventListener('keyup', (e) => {
+    if (e.key == "Enter" || searchBox.value == "") {
         ([...documents.children]).forEach(doc => {
             let value = searchBox.value.toLowerCase()
             let name = doc.children[0].innerHTML.toLowerCase()
