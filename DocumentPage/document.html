@@ -1,0 +1,94 @@
+<DOCTYPE html></DOCTYPE>
+    <html>
+        <head>
+            <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+            <link rel="stylesheet" href="document.css">
+        </head>
+        <body>
+            <div id="top">
+                <div id="left-container">
+                    <div id="left">
+                        <div class='top-text' id="home">CWDesmos</div>
+                        <div class='top-text, vline'></div>
+                        <div class='top-text' id="get-started">Get Started</div>
+                        <div class='top-text' id="learn">Explore</div>
+                    </div>
+                </div>
+
+                <div id="left-container">
+                    <div id="right">
+                        <div class='top-text' id="login">Log in</div>
+                        <div class='top-text, vline'></div>
+                        <div class='top-text' id="signup">Sign up</div>
+                        <div class='top-text' id="username"></div>
+
+                        <div id="userPopDown"></div>
+                            <p class='top-text, pop-down' id="my-documents">My Documents</p>
+                            <p class='top-text, pop-down' id="my-account">My Account</p>
+                            <p class='top-text, pop-down' id="logout">Log out</p>
+                        </div>
+                    </div>
+
+                    <div id="started">
+                        <p class='top-text, pop-down-2'>Desmos Basics</p>
+                        <p class='top-text, pop-down-2'>Simple Coding</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="center">
+                <div id="center-top">
+                    <div id="proj-redirect">Visit Site</div>
+                    <div id="title" contenteditable="true" spellcheck="false"></div>
+                    <div id="author"></div>
+                </div>
+
+                <div id="info">
+                    <div id="tools">
+                        <button class='tools' id="uploadImg">Upload</button>
+                        <input multiple='multiple' id="fileGetter" accept="image/png, image/jpeg, image/jpg" type="file">
+                        <button class='tools' id="fontSize">Font Size</button>
+                        <button class='tools' id="align">Align</button>
+                        <button class='tools' id="save">Save</button>
+                        <button class='tools' id="link">Link</button>
+                    </div>
+
+                    <div id="content">
+                    </div>
+                </div>
+        
+                <p id="hover"></p>
+
+            </div>
+
+            <div id="shade"></div>
+            <div id="add-link">
+                <div id="docViewTop">
+                    <div class="return"></div>
+                    <div class="label">Link to Desmos Project</div>
+                    <div class="filler"></div>
+                </div>
+
+                <div id="add-link-content">
+                    <div id="link-container">
+                        <div class="entry-title">Link</div>
+                        <input class="new-entry" placeholder="Enter link to Desmos Project or leave blank">
+                    </div>
+
+                    <div id="create">Add</div>
+                </div>
+            </div>
+
+            <div id="total-cover"></div>
+            <div id="total-cover-shade"><div id="shade-text">Saving...</div></div>
+
+            <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+            <script defer src="//unpkg.com/mathlive"></script>
+            <script defer src="//unpkg.com/@cortex-js/compute/engine"></script>
+            <script src="documentNav.js"></script>
+            <script src='items.js'></script>
+            <script src="editor.js"></script>
+            <script src="save.js" type="module"></script>
+            <script src="hover.js"></script>
+        </body>
+    </html>

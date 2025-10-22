@@ -1,0 +1,61 @@
+<DOCTYPE html></DOCTYPE>
+    <html>
+        <head>
+            <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+            <link rel="stylesheet" href="signup.css">
+        </head>
+        <body>
+            <div id="design"></div>
+            <div id="top">
+                <div id="left-container">
+                    <div id="left">
+                        <div class='top-text' id="home">CWDesmos</div>
+                        <div class='top-text, vline'></div>
+                        <div class='top-text' id="get-started">Get Started</div>
+                        <div class='top-text' id="learn">Explore</div>
+                    </div>
+                </div>
+
+                <div id="left-container">
+                    <div id="right">
+                        <div class='top-text' id="login">Log in</div>
+                        <div class='top-text, vline'></div>
+                        <div class='top-text' id="signup">Sign up</div>
+                        <div class='top-text' id="username"></div>
+
+                        <div id="userPopDown"></div>
+                            <p class='top-text, pop-down' id="my-documents">My Documents</p>
+                            <p class='top-text, pop-down' id="my-account">My Account</p>
+                            <p class='top-text, pop-down' id="logout">Log out</p>
+                        </div>
+                    </div>
+
+                    <div id="started">
+                        <p class='top-text, pop-down-2'>Desmos Basics</p>
+                        <p class='top-text, pop-down-2'>Simple Coding</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="center">
+                <div id="w-form"></div>
+                    <form name="email-form" data-name="Email form" method="get" id="form">
+                        <div id="message">text</div>
+
+                        <label for="name" class="field">Username</label>
+                        <input class="input" maxlength="256" name="name" data-name="Name" placeholder="Username" type="text" id="name">
+                        <label for="name" class="field">Email</label>
+                        <input class="input" maxlength="256" name="name" data-name="Name" placeholder="email@gmail.com" type="text" id="email">
+                        <label for="password" class="field">Password</label>
+                        <input class="input" maxlength="256" name="password" data-name="Password" placeholder="Password" type="text" id="password">
+                        <label for="password" class="field">Confirm Password</label>
+                        <input class="input" maxlength="256" name="c-password" data-name="C-Password" placeholder="Retype password" type="text" id="c-password">
+                        <input type="submit" data-wait="Please wait..." class="w-button" value="Sign Up" id="submit">
+                    </form>
+                </div>
+            </div>
+
+            <script src="signup.js" type="module"></script>
+            <script src="signupNav.js" type="text/javascript"></script>
+        </body>
+    </html>

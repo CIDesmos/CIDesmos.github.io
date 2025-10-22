@@ -1,0 +1,664 @@
+body {
+    font-family: 'Montserrat';
+    background-color: rgb(247, 255, 248);
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+#left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: fit-content;
+}
+
+#right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-self: self-end;
+    width: fit-content;
+}
+
+#userPopDown {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    border: 1px solid #000;
+    background-color: rgb(247, 255, 248);
+    visibility: hidden;
+}
+
+.pop-down {
+    position: absolute;
+    transition: 200ms;
+    color:#000;
+    visibility: hidden;
+}
+
+.pop-down:hover {
+    color:#12af00;
+}
+
+.vline {
+    height: 20px;
+    border-right: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.top-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 200ms;
+    color:#000;
+}
+
+#my-documents {
+    color:#12af00;
+    transition: 0ms;
+}
+
+.top-text:hover {
+    color:#12af00;
+}
+
+#center {
+    width: calc(100% - 40px);
+    height: max-content;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#documents {
+    width: 100%;
+    height: max-content;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.document-container {
+    height: 70px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.document {
+    border: 1px solid #000;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.view-container {
+    border-right: 1px solid black;
+    width: 180px;
+    height: 100%;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+#center-top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#filler2 {
+    width: 15%;
+    margin: 0;
+    text-align: center;
+}
+
+#center-title {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+#my-projs {
+    font-size: large;
+    text-align: center;
+}
+
+#specifics {
+    text-align: center;
+    font-size: small;
+    color:rgb(0, 0, 0);
+    display: flex;
+    align-self: center;
+    width: 50%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+#published {
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+#unpublished {
+    color: rgb(116, 204, 255);
+}
+
+#reviewing {
+    margin-left: 10px;
+    color: rgb(159, 133, 255);
+}
+
+#delete {
+    width: 10%;
+    margin-left: 0%;
+    margin-right: 5%;
+    height: 80%;
+    align-content: center;
+    text-align: center;
+    transition: 200ms;
+    background-color: white;
+    border: 1px solid #000
+}
+
+#public {
+    width: 10%;
+    margin-left: 5%;
+    margin-right: 0%;
+    height: 80%;
+    align-content: center;
+    text-align: center;
+    transition: 200ms;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+#public:hover, #delete:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+.public {
+    width: 0px;
+    height: 30px;
+    border: 0px solid black;
+    transition: 200ms;
+    background-color: white;
+}
+
+.public-rev {
+    width: 0px;
+    height: 30px;
+    border: 0px solid black;
+    transition: 200ms;
+    background-color: rgb(203, 188, 255);
+}
+
+.public-unpub {
+    width: 0px;
+    height: 30px;
+    border: 0px solid black;
+    transition: 200ms;
+    background-color: rgb(182, 228, 255);
+}
+
+.public:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+.public-rev:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+.public-unpub:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+.view-proj {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    margin-left: 0px;
+    transition: 200ms;
+}
+
+.view-delete {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    margin-left: 0px;
+}
+
+.view-proj-rev {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    margin-left: 0px;
+    transition: 200ms;
+}
+
+.view-proj-unpub {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    margin-left: 0px;
+    transition: 200ms;
+}
+
+.view-proj:hover {
+    background-color: rgb(201, 185, 255);
+}
+
+.view-delete:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.view-proj-rev:hover {
+    background-color: rgb(203, 188, 255);
+}
+
+.view-proj-unpub:hover {
+    background-color: rgb(182, 228, 255);
+}
+
+.title {
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    margin-right: 5px;
+    transition: 200ms;
+}
+
+.title-delete {
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    margin-right: 5px;
+    transition: 200ms;
+}
+
+.title-rev {
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    margin-right: 5px;
+    transition: 200ms;
+}
+
+.title-unpub {
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    margin-right: 5px;
+    transition: 200ms;
+}
+
+.title:hover {
+    background-color: rgb(206, 186, 255);
+}
+
+.title-delete:hover {
+    background-color: rgb(255, 161, 161);
+}
+
+.title-rev:hover {
+    background-color: rgb(203, 188, 255);
+}
+
+.title-unpub:hover {
+    background-color: rgb(182, 228, 255);
+}
+
+.specifics {
+    width: 299px;
+    border-left: 1px solid #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.specific {
+    
+    align-self: center;
+    font-size: small;
+}
+
+#shade {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(136, 136, 136);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+#document-view {
+    position: absolute;
+    width: 70%;
+    height: 90%;
+    border: 1px solid black;
+    background-color: rgb(247, 255, 248);
+    top: 5%;
+    left: 15%;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#docViewTop {
+    width: calc(100% - 10px);
+    margin: 5px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#deleteViewTop {
+    width: calc(100% - 10px);
+    margin: 5px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.return {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid rgb(0, 0, 0);
+}
+
+.label {
+    font-family: 'Montserrat';
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filler {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid rgb(198, 255, 205);
+    visibility: hidden;
+}
+
+#frameContainer {
+    align-self: center;
+    width: 90%;
+    height: 80%;
+    border: 1px solid black;
+    padding: 1px;
+    margin-top: 20px;
+}
+
+#frame {
+    width: 100%;
+    height: 100%;
+}
+
+#add {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #000;
+    transition: 200ms;
+    box-shadow: -2px -2px 4px 3px rgba(0,0,0,0.1);
+}
+
+#add:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+#h {
+    height: 30px;
+    border: 1px solid black;
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+}
+
+#v {
+    width: 30px;
+    border: 1px solid black;
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+}
+
+#add-view {
+    width: 50%;
+    height: 36%;
+    position: fixed;
+    top: 32%;
+    left: 25%;
+    background-color: rgb(247, 255, 248);
+    border: 1px solid #000;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#delete-view {
+    width: 30%;
+    height: 26%;
+    position: fixed;
+    top: 37%;
+    left: 35%;
+    background-color: rgb(247, 255, 248);
+    border: 1px solid #000;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#add-view-content {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#delete-view-content {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#delete-yes {
+    width: 20%;
+    margin-top: 8%;
+    border: 1px solid black;
+    background-color: #ffffff;
+    text-align: center;
+    align-content: center;
+    height: 40%;
+    transition: 200ms;
+}
+
+#delete-yes:hover {
+    background-color: #d7ffd3;
+}
+
+#delete-no {
+    width: 20%;
+    margin-top: 8%;
+    border: 1px solid black;
+    background-color: #ffffff;
+    text-align: center;
+    align-content: center;
+    height: 40%;
+    transition: 200ms;
+}
+
+#delete-no:hover {
+    background-color: #d7ffd3;
+}
+
+#name-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+#link-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.entry-title {
+    width: 90px;
+    align-content: center;
+    text-align: center;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-right: 10px;
+}
+
+.new-entry {
+    width: calc(100% - 100px);
+    height: 100%;
+    outline: none;
+    border: 1px solid black;
+    font-family: 'Montserrat';
+    font-size: medium;
+    padding: 5px;
+}
+
+#create {
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+    transition: 200ms;
+}
+
+#create:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+#no-projects {
+    align-self: center;
+    margin-top: 15%;
+    opacity: 0.4;
+}
+
+#total-cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    transition: 300ms;
+    top: 0px;
+    left: 0px;
+}
+
+#okay {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: white;
+    transition: 200ms;
+}
+
+#okay:hover {
+    background-color: rgb(186, 255, 200)
+}
+
+#started {
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    background-color: white;
+    border: 1px solid black;
+    top: 40px;
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    visibility: 'hidden';
+}
+
+.pop-down-2 {
+    color: #000;
+    transition: 200ms;
+}
+
+.pop-down-2:hover {
+    color: rgb(45, 161, 59)
+}

@@ -1,0 +1,217 @@
+body {
+    font-family: 'Montserrat';
+    background-color: rgb(247, 255, 248);
+    z-index: -3000000;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    box-shadow: 0px 1px 0px #000;
+    background-color: rgb(247, 255, 248);
+    z-index: 10;
+}
+
+#left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: fit-content;
+    z-index: 10;
+}
+
+#right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-self: self-end;
+    width: fit-content;
+    z-index: 10;
+}
+
+#userPopDown {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    border: 1px solid #000;
+    background-color: rgb(247, 255, 248);
+    visibility: hidden;
+    z-index: 10;
+}
+
+.pop-down {
+    position: absolute;
+    transition: 200ms;
+    color:#000;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.pop-down:hover {
+    color:#12af00;
+    z-index: 10;
+}
+
+.vline {
+    height: 20px;
+    border-right: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 10;
+}
+
+#h-line {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 1px;
+    background-color: #000;
+    z-index: 200000;
+}
+
+.top-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 200ms;
+    color:#000;
+    z-index: 10;
+}
+
+#home {
+    color:#12af00;
+    transition: 0ms;
+    z-index: 10;
+}
+
+.top-text:hover {
+    color:#12af00;
+    z-index: 10;
+}
+
+#center {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 94%;
+    width: 100%;
+}
+
+#design {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    --sz: 20px;
+    --sz2: calc(var(--sz) * 10);
+    --sz3: calc((var(--sz) * 10) / 2);
+    --c0: #ffffff00;
+    --c1: #e3f6ff;
+    --c2: #7dfe97;
+	  --c1: #76f0c1;
+    --c2: #52a945;
+    --ts: 50% / var(--sz2) var(--sz2);
+    padding: 0;
+    opacity: 0.15;
+    pointer-events: none;
+    overflow: hidden;
+    background: 
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        radial-gradient(circle at 100.5% -0.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 50% -0.5%, var(--c2) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -0.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -1.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -1.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 0% 100%, var(--c2) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -90deg at 50% 58%, var(--c1) 0 25%, var(--c0) 0 100%) var(--ts),
+        radial-gradient(circle at 50% 100%, var(--c1) 0 var(--sz3), var(--c2) calc(var(--sz3) + 1px) 100%) var(--ts);
+}
+
+#link-container {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: calc(100% - 90px);
+    margin-top: 30px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 50px 20px rgb(247 255 248);
+    z-index: 0;
+}
+
+#frame {
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+    z-index: 0;
+}
+
+#details {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-evenly;
+    opacity: 0.8;
+    background-color: rgb(247 255 248);
+    height: 24px;
+    border: 1px solid black;
+    padding-top: 5px;
+}
+
+#proj-redirect {
+    color: black;
+    transition: 200ms;
+}
+
+#proj-redirect:hover {
+    color: rgb(45, 161, 59)
+}
+
+#started {
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    background-color: white;
+    border: 1px solid black;
+    top: 40px;
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    visibility: 'hidden';
+}
+
+.pop-down-2 {
+    color: #000;
+    transition: 200ms;
+}
+
+.pop-down-2:hover {
+    color: rgb(45, 161, 59)
+}

@@ -1,0 +1,237 @@
+body {
+    font-family: 'Montserrat';
+    background-color: rgb(247, 255, 248);
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+#left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: fit-content;
+}
+
+#right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-self: self-end;
+    width: fit-content;
+}
+
+#userPopDown {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    border: 1px solid #000;
+    background-color: rgb(247, 255, 248);
+    visibility: hidden;
+}
+
+.pop-down {
+    position: absolute;
+    transition: 200ms;
+    color:#000;
+    visibility: hidden;
+}
+
+.pop-down:hover {
+    color:#12af00;
+}
+
+.vline {
+    height: 20px;
+    border-right: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.top-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 200ms;
+    color:#000;
+}
+
+.top-text:hover {
+    color:#12af00;
+}
+
+#login {
+    color:#12af00;
+}
+
+#center {
+    display: flex;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 50px);
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+}
+
+#message {
+    background-color: blue;
+    height: 40px;
+    margin-bottom: 10px;
+    opacity: 0;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+#w-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#form {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.field {
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.input {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-family: Montserrat;
+    outline: none;
+}
+
+#submit {
+    margin-top: 40px;
+    background-color: #009402;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    font-family: Montserrat;
+    width: 300px;
+    height: 40px;
+    transition:300ms;
+    opacity: 1;
+}
+
+#submit:hover {
+    background-color: #3abd3d;
+}
+
+#signup-redirect {
+    text-align: center;
+    margin-top: 20px;
+    color: #000;
+    transition: 300ms;
+}
+
+#signup-redirect:hover {
+    color: #009402;
+}
+
+#forgot-redirect {
+    text-align: center;
+    margin-top: 20px;
+    color: #000;
+    transition: 300ms;
+}
+
+#forgot-redirect:hover {
+    color: #009402;
+}
+
+#design {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    --sz: 20px;
+    --sz2: calc(var(--sz) * 10);
+    --sz3: calc((var(--sz) * 10) / 2);
+    --c0: #ffffff00;
+    --c1: #e3f6ff;
+    --c2: #7dfe97;
+	  --c1: #76f0c1;
+    --c2: #52a945;
+    --ts: 50% / var(--sz2) var(--sz2);
+    padding: 0;
+    opacity: 0.15;
+    pointer-events: none;
+    overflow: hidden;
+    background: 
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        radial-gradient(circle at 100.5% -0.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 50% -0.5%, var(--c2) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -0.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -1.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -1.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 0% 100%, var(--c2) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -90deg at 50% 58%, var(--c1) 0 25%, var(--c0) 0 100%) var(--ts),
+        radial-gradient(circle at 50% 100%, var(--c1) 0 var(--sz3), var(--c2) calc(var(--sz3) + 1px) 100%) var(--ts);
+}
+
+#started {
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    background-color: white;
+    border: 1px solid black;
+    top: 40px;
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    visibility: 'hidden';
+}
+
+.pop-down-2 {
+    color: #000;
+    transition: 200ms;
+}
+
+.pop-down-2:hover {
+    color: rgb(45, 161, 59)
+}

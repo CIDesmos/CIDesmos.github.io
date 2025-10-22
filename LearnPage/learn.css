@@ -1,0 +1,383 @@
+body {
+    font-family: 'Montserrat';
+    background-color: rgb(247, 255, 248);
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+}
+
+#left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: fit-content;
+}
+
+#right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    align-self: self-end;
+    width: fit-content;
+}
+
+#userPopDown {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    border: 1px solid #000;
+    background-color: rgb(247, 255, 248);
+    visibility: hidden;
+}
+
+.pop-down {
+    position: absolute;
+    transition: 200ms;
+    color:#000;
+    visibility: hidden;
+}
+
+.pop-down:hover {
+    color:#12af00;
+}
+
+.vline {
+    height: 20px;
+    border-right: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.top-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 200ms;
+    color:#000;
+}
+
+#learn {
+    color:#12af00;
+    transition: 0ms;
+}
+
+.top-text:hover {
+    color:#12af00;
+}
+
+#center {
+    width: calc(100% - 40px);
+    height: max-content;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#searchTab {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+#searchBox {
+    width: calc(100% - 52px);
+    height: 38px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000
+}
+
+#query {
+    width: calc(100% - 40px);
+    outline: none;
+    font-family: 'Montserrat';
+    border: none;
+}
+
+#search {
+    width: 40px;
+    aspect-ratio: 1/1;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+#search-img {
+    width: 30px;
+    aspect-ratio: 1/1;
+    transition: 200ms;
+    opacity: 1;
+}
+
+#search-img:hover {
+    opacity: 0.6;
+}
+
+#filters {
+    width: 38px;
+    aspect-ratio: 1/1;
+    margin-left: 5px;
+    border: 1px solid #000;
+}
+
+#filterSearch {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    background-color: rgb(255, 255, 255);
+    transition: 200ms;
+}
+
+#filterSearch:hover {
+    background-color: rgb(190, 255, 198);
+}
+
+.hLine {
+    width: 100%;
+    border-bottom: 1px solid black;
+    transition: 200ms;
+}
+
+#documents {
+    width: 100%;
+    height: max-content;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.document {
+    border: 1px solid #000;
+    width: calc(100% - 10px);
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.view-container {
+    border-right: 1px solid black;
+    width: 180px;
+    height: 100%;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+
+.view-proj {
+    background-color: rgb(255, 255, 255);
+    width: 150px;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    margin-left: 0px;
+    transition: 200ms;
+}
+
+.view-proj:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+.title {
+    width: calc(100% - 10px);
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    align-content: center;
+    margin-right: 5px;
+    transition: 200ms;
+}
+
+.title:hover {
+    background-color: rgb(190, 245, 192);
+}
+
+.specifics {
+    width: 299px;
+    border-left: 1px solid #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.specific {
+    align-self: center;
+    font-size: small;
+}
+
+#shade {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(136, 136, 136);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+#document-view {
+    position: fixed;
+    width: 60%;
+    height: 90%;
+    border: 1px solid black;
+    background-color: rgb(247, 255, 248);
+    top: 5%;
+    left: 20%;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#docViewTop {
+    width: calc(100% - 10px);
+    margin: 5px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#return {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid rgb(0, 0, 0);
+}
+
+.label {
+    font-family: 'Montserrat';
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#filler {
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-right: 20px solid rgb(198, 255, 205);
+    visibility: hidden;
+}
+
+#frameContainer {
+    align-self: center;
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    padding: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#frame {
+    width: 100%;
+    height: 100%;
+}
+
+#total-cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    transition: 300ms;
+    top: 0px;
+    left: 0px;
+}
+
+#design {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    --sz: 20px;
+    --sz2: calc(var(--sz) * 10);
+    --sz3: calc((var(--sz) * 10) / 2);
+    --c0: #ffffff00;
+    --c1: #e3f6ff;
+    --c2: #7dfe97;
+	  --c1: #76f0c1;
+    --c2: #52a945;
+    --ts: 50% / var(--sz2) var(--sz2);
+    padding: 0;
+    opacity: 0.1;
+    pointer-events: none;
+    overflow: hidden;
+    background: 
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 136deg at 26% 75%, var(--c2) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        conic-gradient(from 90deg at 51% 99%, var(--c1) 0 25%, #fff0 0 100%) var(--ts),  
+        radial-gradient(circle at 100.5% -0.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 50% -0.5%, var(--c2) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -0.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -1.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 100.5% -1.5%, var(--c1) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        radial-gradient(circle at 0% 100%, var(--c2) 0 var(--sz3), var(--c0) calc(var(--sz3) + 1px) 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -180deg at 5% 50%, var(--c2) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from -90deg at 50% 58%, var(--c1) 0 25%, var(--c0) 0 100%) var(--ts),
+        radial-gradient(circle at 50% 100%, var(--c1) 0 var(--sz3), var(--c2) calc(var(--sz3) + 1px) 100%) var(--ts);
+}
+
+#started {
+    position: absolute;
+    width: 160px;
+    height: 85px;
+    background-color: white;
+    border: 1px solid black;
+    top: 40px;
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    visibility: 'hidden';
+}
+
+.pop-down-2 {
+    color: #000;
+    transition: 200ms;
+}
+
+.pop-down-2:hover {
+    color: rgb(45, 161, 59)
+}
