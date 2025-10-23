@@ -1,4 +1,5 @@
 const content = document.getElementById("content")
+const cText = "#90f0d8"
 
 var index = -1;
 
@@ -53,7 +54,7 @@ function addText(value='', size='16px') {
 
         if (priorElem.getAttribute('class') == 'textContent') {
             priorElem.style.backgroundColor = 'transparent'
-            elem.style.backgroundColor = "#d0ffcf"
+            elem.style.backgroundColor = cText
         }
     } catch {
 
@@ -98,7 +99,7 @@ function addText(value='', size='16px') {
             index -= 1
 
             if (getElem(index).getAttribute('class') == 'textContent') {
-                getElem(index).style.backgroundColor = '#d0ffcf'
+                getElem(index).style.backgroundColor = cText
             }
         }
     })
@@ -109,7 +110,7 @@ function addText(value='', size='16px') {
         }
 
         index = getIndex(elem)
-        elem.style.backgroundColor = "#d0ffcf"
+        elem.style.backgroundColor = cText
         latexEdit = -1
     })
 
@@ -156,7 +157,7 @@ function addLatex(value="") {
                     getElem(index - 1).focus()
 
                     if (getElem(index - 1).getAttribute('class') == 'textContent') {
-                        getElem(index - 1).style.backgroundColor = "#d0ffcf"
+                        getElem(index - 1).style.backgroundColor = cText
                     }
 
                     if (getElem(index - 1).getAttribute('class') != "latexContent") {
@@ -168,7 +169,7 @@ function addLatex(value="") {
                     getElem(index + 1).focus()
 
                     if (getElem(index + 1).getAttribute('class') == 'textContent') {
-                        getElem(index + 1).style.backgroundColor = "#d0ffcf"
+                        getElem(index + 1).style.backgroundColor = cText
                     }
 
                     if (getElem(index + 1).getAttribute('class') != "latexContent") {
@@ -282,7 +283,7 @@ document.addEventListener('keyup', (e) => {
     if (imageEdit > -1) {
         if (e.key == "Enter") {
             addText()
-            getElem(index).style.backgroundColor = "#d0ffcf"
+            getElem(index).style.backgroundColor = cText
             imageFocus(getElem(imageEdit))
         } else if (e.key == "Backspace") {
             imageEdit = -1
@@ -293,7 +294,7 @@ document.addEventListener('keyup', (e) => {
                 index -= 1
 
                 if (getElem(index).getAttribute('class') == 'textContent') {
-                    getElem(index).style.backgroundColor = '#d0ffcf'
+                    getElem(index).style.backgroundColor = cText
                 }
             } else {
                 addText()
