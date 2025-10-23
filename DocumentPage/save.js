@@ -273,7 +273,7 @@ getDocs(lessons).then(async (snapShot) => {
                     tools.style.display = 'none'
                     owner = true
                 } else {
-                    documentName.style.backgroundColor = "#d0ffcf"
+                    documentName.style.backgroundColor = cText
                 }
             }
         }
@@ -314,14 +314,12 @@ if (owner) {
     })
 }
 
-if (editing) {
-  window.addEventListener('beforeunload', function(e) {
-      // Check if there are unsaved changes (using a hypothetical function)
-      if (changed) {
-        // Cancel the event to trigger the confirmation dialog
-        e.preventDefault(); 
-        // Set returnValue to a truthy value (message won't be displayed)
-        e.response = 'yuh'; 
-      }
-  })
-}
+window.addEventListener('beforeunload', function(e) {
+    // Check if there are unsaved changes (using a hypothetical function)
+    if (changed) {
+      // Cancel the event to trigger the confirmation dialog
+      e.preventDefault(); 
+      // Set returnValue to a truthy value (message won't be displayed)
+      e.response = 'yuh'; 
+    }
+})
