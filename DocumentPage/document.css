@@ -129,6 +129,8 @@ body {
     margin-bottom: 10px;
     outline: none;
     padding-bottom: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
 }
 
 #title:focus {
@@ -176,7 +178,7 @@ body {
     width: calc(100% - 10px);
     height: fit-content;
     min-height: 520px;
-    background-color: rgb(225, 240, 226);
+    background-color: rgb(234, 247, 235);
     padding: 5px;
     margin: none;
     display: flex;
