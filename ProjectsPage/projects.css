@@ -385,7 +385,7 @@ body {
 }
 
 #document-view {
-    position: absolute;
+    position: fixed;
     width: 70%;
     height: 90%;
     border: 1px solid black;
@@ -632,7 +632,7 @@ body {
 #notice {
     width: 360px;
     height: 200px;
-    position: absolute;
+    position: fixed;
     background-color: white;
     border: 1px solid black;
     left: calc(50% - 180px);
