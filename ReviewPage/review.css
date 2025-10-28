@@ -629,7 +629,7 @@ body {
     left: 0px;
 }
 
-#okay {
+#okay, #not-okay {
     width: 20px;
     height: 20px;
     border: 1px solid black;
@@ -637,7 +637,7 @@ body {
     transition: 200ms;
 }
 
-#okay:hover {
+#okay:hover, #not-okay:hover {
     background-color: rgb(186, 255, 200)
 }
 
