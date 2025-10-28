@@ -29,14 +29,27 @@ const title = document.getElementsByClassName('label')[0]
 const hLine = document.getElementById('hLine')
 const frame = document.getElementById('frame')
 const okay = document.getElementById('okay')
-var okayState = false
+const notOkay = document.getElementById('not-okay')
+
+var okayState = -1
 
 okay.addEventListener('click', () => {
-    okayState = !okayState
-    if (okayState) {
-        okay.style.backgroundColor = "rgb(38, 205, 72)"
-    } else {
+    if (okayState == 1) {
         okay.style.backgroundColor = 'rgb(255,255,255)'
+        okayState = -1
+    } else {
+        okay.style.backgroundColor = "rgb(38, 205, 72)"
+        okayState = 1
+    }
+})
+
+notOkay.addEventListener('click', () => {
+    if (okayState == 0) {
+        notOkay.style.backgroundColor = 'rgb(255,255,255)'
+        okayState = -1
+    } else {
+        notOkay.style.backgroundColor = "rgb(38, 205, 72)"
+        okayState = 0
     }
 })
 
@@ -83,15 +96,21 @@ function addDoc(data) {
     title.innerHTML = data['Title']
 
     title.addEventListener('click', async () => {
-        if (!okayState) {
+        if (okayState == -1) {
             sessionStorage.setItem('document', data['Title'])
             sessionStorage.setItem('editing', 'false')
             window.location.href = '../DocumentPage/document.html'
         } else {
-            await updateDoc(doc(db, 'Lessons', data['Title']), {
-                'published': true,
-                'reviewing': false
-            })
+            if (okayState == 1) {
+                await updateDoc(doc(db, 'Lessons', data['Title']), {
+                    'published': true,
+                    'reviewing': false
+                })
+            } else {
+                await updateDoc(doc(db, 'Lessons', data['Title']), {
+                    'reviewing': false
+                })
+            }
 
             window.location.href = './review.html'
         }
@@ -146,8 +165,3 @@ returnButton.addEventListener('click', () => {
     shade.style.visibility = 'hidden'
     docView.style.visibility = 'hidden'
 })
-
-
-// When you click on a document thing it should make the screen a little dark and then have a pop up
-// for what the graph looks liks and an option to view document
-// Make sure to make the cursor turn into the click thing when hovering over clickable element after everything done
