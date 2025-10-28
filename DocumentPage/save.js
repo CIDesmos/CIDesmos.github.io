@@ -315,11 +315,8 @@ if (owner) {
 }
 
 window.addEventListener('beforeunload', function(e) {
-    // Check if there are unsaved changes (using a hypothetical function)
-    if (changed) {
-      // Cancel the event to trigger the confirmation dialog
+    if (changed && editing) {
       e.preventDefault(); 
-      // Set returnValue to a truthy value (message won't be displayed)
       e.response = 'yuh'; 
     }
 })
